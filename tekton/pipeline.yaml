@@ -65,6 +65,11 @@ spec:
       runAfter:
         - clone
 
+spec:
+  params:
+    - name: repo-url
+    - name: branch
+      default: main
     - name: build
       workspaces:
         - name: source
@@ -78,4 +83,3 @@ spec:
       runAfter:
         - tests
         - lint
-        
